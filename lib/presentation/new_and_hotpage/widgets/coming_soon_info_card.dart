@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import '../../../core/colors/colors.dart';
 import '../../../core/constants/constant.dart';
 import '../../../model/movie_info.dart';
@@ -17,7 +16,7 @@ class ComingSoonInfoCard extends StatelessWidget {
         'https://image.tmdb.org/t/p/w500${movieInfo.posterPath}?api_key=b2dee3b855c4ea705ff5dda3c0201768';
 
     return Padding(
-      padding: const EdgeInsets.only(top: 23.0),
+      padding: const EdgeInsets.only(top: 25.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -94,7 +93,7 @@ class ComingSoonInfoCard extends StatelessWidget {
   }
 
   String fetchDate(String date) {
-    //convert date in string format to date format 
+    //convert date in string format to date format
     DateTime dateInFormat = DateTime.parse(date);
     final formatDate = (DateFormat.MMMMd().format(dateInFormat)).split(" ");
     //add \n to make it in the displayable format eg:

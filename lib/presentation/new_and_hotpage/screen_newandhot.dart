@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_netflix_clone/presentation/new_and_hotpage/widgets/coming_soon_widget.dart';
 import 'package:my_netflix_clone/presentation/new_and_hotpage/widgets/everyones_watching_widget.dart';
-import '../../core/colors/colors.dart';
 import '../../core/constants/constant.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
@@ -13,12 +12,12 @@ class ScreenNewAndHot extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(95),
+            preferredSize: const Size.fromHeight(100),
             child: AppBar(
               title: const Text(
                 "New & Hot",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 28,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -37,14 +36,14 @@ class ScreenNewAndHot extends StatelessWidget {
                 kWidth,
               ],
               bottom: TabBar(
-                  unselectedLabelColor: kWhiteColor,
-                  labelColor: kBlackColor,
+                  unselectedLabelColor: Colors.white,
+                  labelColor: Colors.black,
                   isScrollable: true,
                   labelStyle: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.bold),
                   indicator: BoxDecoration(
-                    color: kWhiteColor,
-                    borderRadius: kRadius30,
+                    color: Colors.white,
+                    borderRadius: kRadius20,
                   ),
                   tabs: const [
                     Tab(
@@ -72,12 +71,17 @@ class ScreenNewAndHot extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         kHeight20,
-        Text(
-          "🔥Everyone's watching",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 17,
-          ),
+        Row(
+          children: [
+            kWidth,
+            Text(
+              " 🔥Everyone's watching",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 17,
+              ),
+            ),
+          ],
         ),
         Expanded(child: EveryonesWatchingWidget()),
       ],

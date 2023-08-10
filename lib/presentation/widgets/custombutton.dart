@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../core/colors/colors.dart';
 
 class CustomButtonWidget extends StatelessWidget {
@@ -7,7 +6,7 @@ class CustomButtonWidget extends StatelessWidget {
     super.key,
     required this.icon,
     required this.title,
-    this.iconSize=30,
+    this.iconSize = 30,
     this.textSize = 18,
   });
 
@@ -20,14 +19,16 @@ class CustomButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(icon,
-        color: kWhiteColor,
-        size: iconSize,),
-        Text(title,
-        style: TextStyle(
-          fontSize: textSize,
-         
+        Icon(
+          icon,
+          color: kWhiteColor,
+          size: iconSize,
         ),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: textSize,
+          ),
         ),
       ],
     );
